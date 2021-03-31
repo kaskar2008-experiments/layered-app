@@ -1,7 +1,7 @@
 import { IBaseAdapter } from './base';
 
 export class LocalStorageAdapter implements IBaseAdapter {
-  public static isEnabled = !!window?.localStorage;
+  public static isEnabled = typeof window !== "undefined" && !!window?.localStorage;
 
   constructor() {
     if (!LocalStorageAdapter.isEnabled) {

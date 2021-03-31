@@ -1,5 +1,5 @@
 <template lang="pug">
-li.user-item {{ user.firstName }}
+li.user-item {{ user.first_name }}
 </template>
 
 <script lang="ts">

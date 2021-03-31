@@ -1,7 +1,8 @@
 import { IBaseAdapter } from './adapters/base';
 import { LocalStorageAdapter } from './adapters/LocalStorage';
+import { MemoryAdapter } from './adapters/Memory';
 
-export const currentAdapter = new LocalStorageAdapter();
+export const currentAdapter = import.meta.env.SSR ? new MemoryAdapter() : new LocalStorageAdapter();
 
 export class Cacheble {
   constructor(

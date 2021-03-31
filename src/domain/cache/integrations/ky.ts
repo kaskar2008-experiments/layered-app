@@ -1,4 +1,4 @@
-import ky, { BeforeRequestHook, AfterResponseHook, Options } from 'ky'
+import ky, { BeforeRequestHook, AfterResponseHook, Options } from 'ky-universal'
 import { cachable } from '../business';
 
 export const fromCacheBeforeHook: BeforeRequestHook = (

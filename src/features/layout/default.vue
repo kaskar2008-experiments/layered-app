@@ -1,8 +1,8 @@
 <template lang="pug">
 header
   nav
-    router-link(:to="{ name: 'Home' }") Home
-    router-link(:to="{ name: 'Users' }") Users
+    router-link(to="/") Home
+    router-link(to="/users") Users
 router-view
 </template>
 

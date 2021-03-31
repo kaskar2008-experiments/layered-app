@@ -1,14 +1,8 @@
 import { RouteRecordRaw } from 'vue-router';
+import { homeRoute } from '@/features/home/routes';
+import { usersRoute } from '@/features/users/routes';
 
 export const routes: RouteRecordRaw[] = [
-  {
-    name: 'Home',
-    path: '/',
-    component: () => import('@/features/home/Home.vue')
-  },
-  {
-    name: 'Users',
-    path: '/users',
-    component: () => import('@/features/users/Users.vue')
-  },
+  usersRoute,
+  homeRoute,
 ];

@@ -1,7 +1,10 @@
-import { createApp } from 'vue'
+import { createSSRApp } from 'vue'
 import App from '@/features/app/App.vue'
-import { router } from '@/domain/routing/business';
+import { createRouter } from '@/domain/routing/business';
 
-createApp(App)
-  .use(router)
-  .mount('#app');
+export function createApp() {
+  const app = createSSRApp(App)
+  const router = createRouter()
+  app.use(router)
+  return { app, router }
+}
